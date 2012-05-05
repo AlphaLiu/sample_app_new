@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 group :development do
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 gem 'slim'
@@ -28,7 +29,13 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', '0.4.3.1', :require => false
+  gem 'growl', '1.0.3'
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 # To use ActiveModel has_secure_password
