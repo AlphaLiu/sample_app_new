@@ -15,6 +15,8 @@ end
 gem 'jquery-rails'
 gem 'rspec-rails' ,:group => [:development,:test]
 gem 'sqlite3', :group => [:development]
+gem 'annotate', :group => [:development]
+gem 'bcrypt-ruby'
 
 gem 'slim'
 # bootstrap
