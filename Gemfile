@@ -54,7 +54,7 @@ end
 
 group :test do
   # Pretty printed test output
-  #gem 'factory_girl_rails' , "~> 1.1.0" ,:require => false
+  gem 'factory_girl_rails', '~>3.2.0'
   gem "capybara"
   gem 'guard-spork'
   gem 'spork'
