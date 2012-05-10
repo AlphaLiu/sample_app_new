@@ -17,6 +17,9 @@ gem 'rspec-rails' ,:group => [:development,:test]
 gem 'sqlite3', :group => [:development]
 gem 'annotate', :group => [:development]
 gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'slim'
 # bootstrap
