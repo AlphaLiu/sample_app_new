@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    redirect_to root_path if signed_in?
     @user = User.new
   end
 
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    return redirect_to root_path if signed_in?
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
@@ -49,7 +51,10 @@ class UsersController < ApplicationController
 
   private
   def signed_in_user
-    redirect_to signin_path, notice: "Please sign in." unless signed_in?
+    unless signed_in?
+      store_location
+      redirect_to signin_path, notice: "Please sign in." 
+    end
   end
 
   def correct_user
